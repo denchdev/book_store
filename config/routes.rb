@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :admins, controllers: { session: "admins/session" }
+  devise_for :customers, controllers: { session: "customers/session" }
   resources :admins
   resources :credit_cards
   resources :countries
@@ -10,7 +12,7 @@ Rails.application.routes.draw do
   resources :authors
   resources :authors
   resources :categories
-  #devise_for :users
+  
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
   resources :books
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'

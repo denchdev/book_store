@@ -1,4 +1,9 @@
 class Customer < ActiveRecord::Base
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
+=begin
   has_many :orders, dependent: :destroy
   has_many :ratings, dependent: :destroy  
   #has_many :books, through: ratings
@@ -18,4 +23,5 @@ class Customer < ActiveRecord::Base
   def current_order
     self.orders.in_progress.last
   end
+=end
 end

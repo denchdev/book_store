@@ -17,7 +17,7 @@ class Order < ActiveRecord::Base
   scope :in_progress, -> {where(state: STATES[0])}
   #####
   #validates :checkout_step, inclusion: { in: 1..5 }
-  
+=begin  
   state_machine :state, :initial => :in_progress do
     after_transition :on => :complete, :do => :complete!
 
@@ -33,6 +33,7 @@ class Order < ActiveRecord::Base
       transition :in_delivery => :delivered
     end
   end
+=end
   ##########
   
   
