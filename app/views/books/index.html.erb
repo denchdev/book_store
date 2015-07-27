@@ -6,6 +6,7 @@
   <thead>
     <tr>
       <th>Title</th>
+      <th>image</th>
       <th>Description</th>
       <th>Price</th>
       <th>Stock</th>
@@ -20,6 +21,7 @@
     <% @books.each do |book| %>
       <tr>
         <td><%= book.title %></td>
+        <td><%= image_tag book.image_url.to_s %></td>
         <td><%= book.description %></td>
         <td><%= book.price %></td>
         <td><%= book.stock %></td>

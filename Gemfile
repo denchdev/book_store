@@ -12,10 +12,20 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
+gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'cancan'
+gem 'cancancan'
 gem 'rails_admin'
 gem 'rails-i18n'
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'haml'
+gem 'haml-rails'
+gem 'aasm'
+gem 'fog-aws'
+
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

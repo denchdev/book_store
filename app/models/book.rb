@@ -5,5 +5,7 @@ class Book < ActiveRecord::Base
   
 #  has_many :customers, :throught :ratings
 
-  validates_presence_of :title, :price, :stock
+  validates_presence_of :title, :price, :stock  
+  
+  mount_uploader :image, ImageUploader
 end
