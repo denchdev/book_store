@@ -5,6 +5,7 @@ class Customer < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   devise :omniauthable, :omniauth_providers => [:facebook]
+  
 =begin
   has_many :orders, dependent: :destroy
   has_many :ratings, dependent: :destroy  
