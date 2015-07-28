@@ -3,6 +3,8 @@ class Customer < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+         
+  devise :omniauthable, :omniauth_providers => [:facebook]
 =begin
   has_many :orders, dependent: :destroy
   has_many :ratings, dependent: :destroy  

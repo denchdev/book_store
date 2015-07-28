@@ -8,11 +8,7 @@ RailsAdmin.config do |config|
   end
   config.current_user_method(&:current_admin)
   
-  config.authorize_with do
-    authenticate_or_request_with_http_basic('Site Message') do |username, password|
-      username == 'foo' && password == 'bar'
-    end
-  end
+  
 
   ## == Cancan ==
   # config.authorize_with :cancan

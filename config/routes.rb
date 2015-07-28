@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
-  devise_for :admins, controllers: { session: "admins/session" }
-  devise_for :customers, controllers: { session: "customers/session" }
-  resources :admins
+  devise_for :admin, controllers: { session: "admins/session" }
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  devise_for :customers, controllers: { session: "customers/session",
+                                        omniauth_callbacks: "users/omniauth_callbacks" }
+  #resources :admins
+  resources :books
   resources :credit_cards
   resources :countries
   resources :addresses
@@ -13,9 +16,9 @@ Rails.application.routes.draw do
   resources :authors
   resources :categories
   
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
-  resources :books
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
+  #devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

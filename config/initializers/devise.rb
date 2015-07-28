@@ -4,7 +4,7 @@ Devise.setup do |config|
 
   config.scoped_views = true
   
-  config.omniauth :facebook, "131799380488151", "c4714634b452ad42e8624c5859734936"
+  config.omniauth :facebook, "1484143058546760", "44172f37000abc85a5ea726fac88f5e1"
   # The secret key used by Devise. Devise uses this key to generate
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
