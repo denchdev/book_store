@@ -18,12 +18,15 @@ gem 'cancan'
 gem 'cancancan'
 gem 'rails_admin'
 gem 'rails-i18n'
-gem 'carrierwave'
+gem 'carrierwave'#, github: 'carrierwaveuploader/carrierwave'
 gem 'mini_magick'
 gem 'haml'
 gem 'haml-rails'
 gem 'aasm'
 gem 'fog-aws'
+gem 'fog'
+gem 'carrierwave-aws'
+gem 'figaro'
 
 
 
